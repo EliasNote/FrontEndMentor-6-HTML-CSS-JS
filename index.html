@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
@@ -35,26 +36,4 @@
     <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
   </main>
 </body>
-<script>
-  function select(element) {
-    const selecao = document.getElementById('select')
-    if (selecao) {
-      selecao.removeAttribute('select');
-      selecao.setAttribute('id', 'unselect')
-    }
-    element.setAttribute('id', 'select');
-  }
-  function rating() {
-    const text = document.getElementById('rating');
-    text.innerText = document.getElementById('select').value;
-  }
-  function altern() {
-    const main1 = document.getElementById('main1')
-    const main2 = document.getElementById('main2')
-    main1.style.display = "none"
-    main2.style.display = "flex"
-    rating()
-    event.preventDefault()
-  }
-</script>
 </html>
